@@ -118,7 +118,7 @@ public class CustomerController {
 	}
 	
 	@DeleteMapping("/customers/{id}")
-	public ResponseEntity<?> postCustomer(@PathVariable(value="id") long id, HttpServletRequest req) {
+	public ResponseEntity<?> deleteCustomer(@PathVariable(value="id") long id, HttpServletRequest req) {
 		
 		if(BasicAuthentication.isAuth(req)) {
 			cr.deleteById(id);

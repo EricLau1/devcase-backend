@@ -65,7 +65,6 @@ public class PurchaseController {
 		
 		if(BasicAuthentication.isAuth(req)) {
 			if(page.isPresent()) {
-				System.out.printf("\nPage => %d\n", page.get().intValue());
 				return new ResponseEntity<>(pr.findAll(Pagination.paginate(page.get().intValue(), "id")), 
 						HttpStatus.OK);
 			}

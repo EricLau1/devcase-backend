@@ -23,7 +23,7 @@ public class Purchase {
 	@Column(columnDefinition="decimal(10, 2)", nullable=false)
 	private BigDecimal cashSpent;
 	
-	@ManyToOne(optional=false, cascade=CascadeType.ALL)
+	@ManyToOne(optional=false, cascade=CascadeType.REMOVE)
 	private Customer customer;
 
 	@Column(columnDefinition="int(5) default '0'")

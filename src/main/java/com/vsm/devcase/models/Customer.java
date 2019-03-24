@@ -80,7 +80,7 @@ public class Customer {
 	private Calendar updatedAt;
 	
 	@JsonIgnore
-	@OneToMany(mappedBy="customer", cascade=CascadeType.ALL, orphanRemoval = true)
+	@OneToMany(mappedBy="customer", cascade=CascadeType.REMOVE)
 	@OnDelete(action=OnDeleteAction.CASCADE)
 	List<Purchase> purchases;
 
