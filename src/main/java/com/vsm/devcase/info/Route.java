@@ -43,7 +43,7 @@ public class Route {
 		routes.add(new Route("/v1/api/customers", "GET", 
 				"Retorna uma lista de clientes paginada. Informe a numero da paǵina pela Uri: /v1/api/customers?page=1"));
 		routes.add(new Route("/v1/api/customers/1", "GET", 
-				"Retorna uma lista de clientes paginada. Informe a numero da paǵina pela Uri: /v1/api/customers?page=1"));
+				"Retorna um cliente pelo ID"));
 		routes.add(new Route("/v1/api/customers/gender/F?page=1", "GET", 
 				"Retorna uma lista paginada de clientes de um determinado gênero: M ou F") );
 		routes.add(new Route("/v1/api/customers", 
