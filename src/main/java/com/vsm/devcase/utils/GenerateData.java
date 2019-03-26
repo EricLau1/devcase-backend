@@ -1,5 +1,6 @@
 package com.vsm.devcase.utils;
 
+import java.text.Normalizer;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -33,7 +34,8 @@ public class GenerateData {
 			Customer c = new Customer();
 			c.setFirstName(girls[random.nextInt(girls.length)]);
 			c.setLastName(GenerateData.generateLastName());
-			c.setEmail((c.getFirstName() + c.getLastName()).toLowerCase() + "@email.com.br");
+			c.setEmail( removeAccents((c.getFirstName() + c.getLastName()).toLowerCase()) + 
+					"@email.com.br");
 			c.setGender(Gender.F);
 			c.setPhone(GenerateData.generatePhone());
 			c.setCpf(GenerateData.generateCpf());
@@ -54,7 +56,8 @@ public class GenerateData {
 			Customer c = new Customer();
 			c.setFirstName(boys[random.nextInt(boys.length)]);
 			c.setLastName(GenerateData.generateLastName());
-			c.setEmail((c.getFirstName() + c.getLastName()).toLowerCase() + "@email.com.br");
+			c.setEmail( removeAccents((c.getFirstName() + c.getLastName()).toLowerCase()) + 
+					"@email.com.br");
 			c.setGender(Gender.M);
 			c.setPhone(GenerateData.generatePhone());
 			c.setCpf(GenerateData.generateCpf());
@@ -77,7 +80,8 @@ public class GenerateData {
 			Customer c = new Customer();
 			c.setFirstName(girls[i]);
 			c.setLastName(GenerateData.generateLastName());
-			c.setEmail((c.getFirstName() + c.getLastName()).toLowerCase() + "@email.com.br");
+			c.setEmail( removeAccents((c.getFirstName() + c.getLastName()).toLowerCase()) + 
+					"@email.com.br");
 			c.setGender(Gender.F);
 			c.setPhone(GenerateData.generatePhone());
 			c.setCpf(GenerateData.generateCpf());
@@ -92,7 +96,8 @@ public class GenerateData {
 			Customer c = new Customer();
 			c.setFirstName(boys[i]);
 			c.setLastName(GenerateData.generateLastName());
-			c.setEmail((c.getFirstName() + c.getLastName()).toLowerCase() + "@email.com.br");
+			c.setEmail( removeAccents((c.getFirstName() + c.getLastName()).toLowerCase()) + 
+					"@email.com.br");
 			c.setGender(Gender.M);
 			c.setPhone(GenerateData.generatePhone());
 			c.setCpf(GenerateData.generateCpf());
@@ -162,5 +167,7 @@ public class GenerateData {
   	}
 	
 
-
+	public static String removeAccents(String str) {
+	    return Normalizer.normalize(str, Normalizer.Form.NFD).replaceAll("[^\\p{ASCII}]", "");
+	}
 }

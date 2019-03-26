@@ -6,11 +6,11 @@ public class DataUtil {
 		String[] names = {
 					"Jane", "Maria", "Samantha", "Barbara", "Miranda", 
 					"Rayssa", "Andrezza", "Israellen", "Suelen", "Ellen", 
-					"Ana", "Emma", "Pâmela", "Thaís", "Rachel", "Raquel",
+					"Ana", "Emma", "Pâmela", "Thais", "Rachel", "Raquel",
 					"Mia", "Victoria", "Camila", "Elizabeth", "Emily",
 					"Sofia", "Bella", "Daenerys", "Madison", "Scarlett",
-					"Grace", "Arya", "Viuva Negra", "MulherMaravilha",
-					"Susan", "Chloe", "Mila", "Nora", "Lina", "Brooklyn",
+					"Grace", "Arya", "ViuvaNegra", "MulherMaravilha",
+					"Susan", "Chlôe", "Mila", "Nora", "Lina", "Brooklyn",
 					"Leah", "Zoe", "Audrey", "Adriana", "Géssica", "Jennifer",
 					"Hazel", "Aurora", "Lucy", "Caroline", "Madelyn", "Sarah",
 					"Gabriela", "Naomi", "Nami", "Alice", "Haley", "Serenety"
